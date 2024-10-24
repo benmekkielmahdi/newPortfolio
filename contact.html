@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.css">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+
+    
+    
+   
+    <title>El mahdi Ben Mekki</title>
+</head>
+<body>
+
+
+    
+ 
+    <header>
+    
+        <div class="social-icons">
+            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            <a href=""><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.instagram.com/thisisoden/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.paypal.com/paypalme/elmahdibenmekki"><i class="fa-brands fa-paypal"></i></a>
+        </div>
+       <!-- Button for toggling the menu -->
+       <button class="menu-toggle" aria-label="Toggle navigation">
+        <!-- Hamburger icon -->
+        <i class="fa-solid fa-bars open-icon"></i>
+        <!-- Close (X) icon -->
+        <i class="fa-solid fa-times close-icon" style="display: none;"></i>
+    </button>
+
+        <nav class="navigation"> 
+            <a href="./">Home</a>
+            <a href="./#services">Services</a>
+            <a href="./#projects">Projects</a>
+            <a href="./#contact">Contact</a>
+            
+        </nav>
+        
+    </header >
+
+            
+    <h1>Contact Us</h1>
+        
+    <form action="https://formspree.io/f/xldrgggn" method="post" style="margin-bottom: 100px;">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea><br><br>
+        <input type="submit" value="Submit">
+      </form>
+
+
+
+
+    
+
+      <footer class="footer">
+        <p class="footer-title">©2024. All Rights Reserved</p>
+            <div class="social-icons">
+                <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                <a href=""><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/thisisoden/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.paypal.com/paypalme/elmahdibenmekki"><i class="fa-brands fa-paypal"></i></a>
+                     
+    
+            </div>
+    
+    
+    </footer>  
+</body>
+</html>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navigation = document.querySelector('.navigation');
+    const openIcon = document.querySelector('.open-icon'); // Hamburger icon
+    const closeIcon = document.querySelector('.close-icon'); // Close (X) icon
+
+    menuToggle.addEventListener('click', function() {
+        navigation.classList.toggle('active'); // Toggle the menu visibility
+
+        // Toggle the icons
+        openIcon.style.display = openIcon.style.display === 'none' ? 'inline' : 'none';
+        closeIcon.style.display = closeIcon.style.display === 'none' ? 'inline' : 'none';
+    });
+});
+</script>

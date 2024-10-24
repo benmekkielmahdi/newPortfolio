@@ -1,0 +1,624 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{ 
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+.animation-container {
+    position: absolute;
+    top: 20%;
+    right: 0;
+    transform: translateY(-50%);
+  
+    /* background-color: white; */
+    /* filter: hue-rotate(148deg) saturate(500%); */
+
+
+}
+
+
+
+header{
+    background-color: whitesmoke;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 200px;
+
+} 
+
+.navigation a{
+    color:#457b9d;
+    text-decoration: none;
+    font-size: 1.4em;
+    font-weight: 800;
+    padding-left: 20px;
+}
+.navigation a:hover {
+    color: black;
+    text-decoration: underline; /* Adds an underline */
+    font-size: 1.5em; /* Increases the size of the text */
+}
+
+section{
+   padding: 100px 200px;
+    
+}
+.main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url('images/nvBackground-removebg.png') no-repeat;
+    background-size: contain; /* Make the image smaller */
+    background-position: left center; /* Position the image on the right */
+    background-attachment: fixed;
+
+    
+    
+}
+
+.align-right {
+    display: flex;
+    justify-content: flex-end; /* Aligns the section to the right */
+    width: 100%;
+}
+.align-right div {
+    text-align: right; /* Align text to the right */
+
+}
+.left-align {
+    text-align: left; /* Align text to the left */
+    margin-bottom: 70px;
+}
+
+.main h2{
+    color: #457b9d;
+    font-size: 1.5em;
+    font-weight: 300;
+    
+
+}
+.main h2 span1{
+    display: inline-block;
+    margin-left: 40px;
+    color:#457b9d;
+    font-size: 3.3em;
+    font-weight: 200;
+  
+    /* -webkit-text-stroke: 1px white; */
+}
+.main h3{
+    color: black;
+    font-size: 1.7em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 10px;
+    margin-bottom:30px ;
+
+}
+.main-btn {
+    color: white;
+    background-color:#457b9d;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    display: inline-block;
+    padding: 0.9375em 2.1875em;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    transition:  0.8s ease;
+
+}
+.main-btn:hover{
+    background-color:white ;
+    color:#457b9d ;
+    transform: scale(1.1);
+  
+}
+
+.main-btn2{
+    color: white;
+    background-color:#e63946;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    display: inline-block;
+    padding: 0.9375em 2.1875em;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    transition:  0.8s ease;
+    margin-right: 12px;
+
+}
+.main-btn2:hover{
+    background-color:white ;
+    color: #e63946;
+    transform: scale(1.1);
+}
+
+
+.social-icons a{
+    color: #457b9d;
+    font-size: 1.7em;
+    padding-right: 30px;
+   
+}
+
+
+
+.title{
+
+    display: flex;
+    justify-content: center;
+    color: #457b9d;
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 30px;
+
+}
+/* .cards#services {
+    background-color:#8f2f59 ; 
+   
+} */
+.container {
+    text-align: right; /* Aligns text to the right within this container */
+}
+.content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap ;
+    
+}
+.allcards{
+    display: flex;
+    justify-content: center;
+    
+    
+}
+.card{
+    background-color: white;
+    width:18em ;
+    box-shadow: 0 5px 25px rgba(1, 1, 1,15% );
+    border-radius: 10px;
+    padding: 25px;
+    margin: 15px;
+    transition: 0.7s ease;
+} 
+.card:hover {
+    transform: scale(1.1);
+
+}
+.icon{
+    color:#457b9d ;
+    font-size: 4em;
+    text-align: center;
+}
+.info{
+    text-align: center;
+
+}
+
+.info h3{
+    color: #457b9d;
+    font-size:1.2em;
+    font-weight: 700;
+    margin: 10px;
+    text-decoration: none;
+}
+.info a{
+    color: black;
+}
+.sorry{
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-size: 1.1em;
+    font-weight: 500;
+
+}
+.projects{
+    background-color: #1d3557;
+}
+.contact .icon{
+    font-size: 4.5em;
+    
+}
+.contact .info h3{
+    color: black;
+
+}
+.contact .info p{
+    font-size: 1em;
+} 
+.footer{
+    background-color:#457b9d ;
+    color: white;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-title{
+    font-size: 1.1em;
+    font-weight: 200;
+
+}
+.footer-title span{
+    color:white;
+}
+
+.footer .social-icons a{
+    font-size: 1.5em;
+    padding:0 12px 0 0;
+    color: white;
+
+}
+.see span{
+    color: white;
+    background-color:#457b9d;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 500;
+    display: inline-block;
+    padding: 0.6000em 1.1em;
+    letter-spacing: 0.8px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    transition:  0.8s ease;
+   
+}
+
+.see span:hover{
+    background-color:white ;
+    color: #457b9d;
+    transform: scale(1.1);
+}
+/* WhatsApp button styles */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px; 
+    right: 20px;
+    background-color: #25bd5d; /* WhatsApp green color */
+    color: #fff;
+    padding: 15px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    box-shadow: 0 5px 25px rgba(1, 1, 1,60% );
+}
+
+.whatsapp-button:hover {
+    background-color: #128C7E; /* Darker shade of WhatsApp green on hover */
+}
+.whatsapp-button i {
+    font-size: x-large;
+
+}
+
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 50%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #457b9d; }
+}
+
+.typing-animation {
+    
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: .1em solid #457b9d;
+    font-size: 100;
+    animation: typing 4s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+
+
+.color-toggle-circle {
+    width: 30px;
+    height: 30px;
+    background-color:#457b9d;
+    border-radius: 50%;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+
+@media (max-width:1023px){
+    header{
+        padding: 12px 20px;
+    }
+    .navigation {
+       display: flex;
+    }
+    .title{
+        font-size: 1.8em;
+    }
+    section{
+        padding: 80px 20px;
+    }
+    .main-content h2{
+        font-size: 1em;
+    }
+    .main-content h3{
+        font-size: 1.6em;
+    }
+    .content{
+        flex-direction: column;
+        align-items: center;
+    }
+   .main{
+    width: 30%;
+    height: auto;
+   }
+}
+
+@media (max-width:700px) {
+    body{
+        font-size: 12px;
+    }
+    .main-content h2{
+        font-size: 0.8em;
+    }
+    .main-content h3{
+        font-size: 1.4em;
+    }
+    .main{
+        width: 50%;
+        height: 50%;
+        background: url('images/nvBackground-removebg.png'); 
+      
+        background-repeat: no-repeat;
+        background-position: center center;
+        
+        
+       
+      
+    }
+
+}
+
+
+@media (max-width:500px) {
+
+    .main h2 span1{
+        display: inline-block;
+        margin-left: 30px;
+        color:#457b9d;
+        font-size: 2.3em;
+        font-weight: 500;
+      
+        /* -webkit-text-stroke: 1px white; */
+    }
+    body{
+        font-size: 9px;
+    }
+    .main {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        /* background-image: none; */
+
+        background-size: 100% auto; /* Or use specific dimensions like '800px' */
+        background-position: right center; /* Position the image on the right and center vertically */
+        background-attachment: fixed; /* Image stays fixed while scrolling */
+    }
+    
+    .main h2 {
+        color: white;
+        font-size: 1.5em;
+        font-weight: 500;
+   
+    
+    }
+    .main-btn2{
+        
+        font-size: 1.5em;
+
+        }
+
+     .main-btn {
+         
+            font-size: 1.5em;
+          
+           
+        }
+
+.navigation a{
+
+    font-size: 1.1em;
+    font-weight: 710;
+    padding-left: 15px;
+}
+.cardscontact .card{
+    font-size: smaller;
+    width: 150px;
+    padding: 20px;
+    margin: 10px;
+}
+
+
+.card{
+
+
+font-size: larger;
+font-weight: 600;
+
+   
+
+    
+
+    }
+.cards .content{
+    font-size: larger;
+
+}
+section{
+        padding: 60px 10px;
+    }
+
+    .title{
+        font-size: 3em;
+    }
+
+
+
+   .footer{
+    padding: 0.5em;
+   }
+   .footer-title{
+    font-size: 1em;
+    font-weight: 600;
+
+}
+}
+
+
+
+
+
+
+
+/* Style for menu toggle button */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    background: none;
+    border: none;
+    /* Positioning for mobile view */
+    position: absolute;
+    right: 10px; /* Adjust spacing from the right */
+    color: #457b9d !important;
+    top: 5px;
+}
+
+/* Responsive design for screens smaller than 768px */
+@media (max-width: 768px) {
+    /* Make navigation links block elements on mobile */
+.navigation a {
+    text-decoration: none;
+    color: #457b9d ; /* Adjust text color as needed */
+    font-size: 14px;
+}
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navigation {
+        display: none; /* Hide default navigation links */
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navigation.active {
+        display: flex; /* Show navigation links when active */
+    }
+
+    .navigation a {
+        padding: 10px;
+        border-bottom: 1px solid #ddd; /* Optional: Add a border between items */
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-top: 10px;
+    }
+    .social-icons a{
+        color: #457b9d;
+        font-size: 1.8em;
+        padding-left: 40px;
+        
+     
+       
+  
+    
+}
+
+
+
+}
+
+/* Style for screens larger than 768px */
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none;
+    }
+    
+}
+@media (max-width: 1025px) {
+    .main {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        position: relative; /* Add this to position the pseudo-element correctly */
+        background-image: url('imges/nvBackground-removebg.png'); /* Replace with your image URL */
+        background-size: 100% auto; 
+        background-position: right center; 
+        background-attachment: fixed; 
+    }
+    
+    .main::before {
+        content: ""; /* Required for the pseudo-element to display */
+        position: absolute; /* Position it absolutely */
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(255, 255, 255, 0.5); /* White with 50% opacity, adjust as needed */
+        z-index: 1; /* Ensure it appears above the background image */
+    }
+    
+    .main > * {
+        position: relative; /* This keeps the content above the overlay */
+        z-index: 2; /* Ensures that the content is above the overlay */
+    }
+    .animation-container{
+        display: none;
+    }
+
+
+
+    
+
+/* Define the animation */
+
+
+/* Apply the animation to h2 elements */
+#hello  {
+    color: #457b9d;
+    font-size: 2.3em;
+    font-weight: 300;
+    animation: fadeInOut 6s ; /* Apply the animation */
+}
+
+    
+}
+
+
+
+

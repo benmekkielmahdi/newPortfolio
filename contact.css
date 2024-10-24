@@ -1,0 +1,182 @@
+
+.info{
+    text-align: center;
+
+}
+
+.info h3{
+    color: #457b9d;
+    font-size:1.2em;
+    font-weight: 700;
+    margin: 10px;
+}
+.icon{
+    color:#457b9d ;
+    font-size: 6em;
+    text-align: center;
+}
+.contact .icon{
+    font-size: 4.5em;
+    
+}
+.contact .info h3{
+    color: black;
+
+}
+.contact .info a{
+    font-size: 1em;
+    color: black
+}
+
+.allcards{
+    display: flex;
+    justify-content: center;
+    
+}
+.card{
+    background-color: white;
+    width:18em ;
+    box-shadow: 0 5px 25px rgba(1, 1, 1,15% );
+    border-radius: 10px;
+    padding: 25px;
+    margin: 15px;
+    transition: 0.7s ease;
+} 
+.card:hover {
+    transform: scale(1.1);
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    color: #457b9d;
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 30px;
+
+}
+
+/* form contact */
+
+  
+  h1 {
+    text-align: center;
+    color: #457b9d;
+    margin-top: 50px;
+    padding: 2.5%;
+    font-size: 2.5em;
+    font-weight: 800;
+    
+  }
+  
+  form {
+    max-width: 70%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px #ccc;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 0px 5px #ccc;
+  }
+  
+  input[type="submit"] {
+    background-color: #457b9d;
+    color: #fff;
+    padding: 0px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.2em;
+    height: 4vh; 
+  }
+
+  .page-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+
+
+
+
+
+header{
+    background-color: white;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 200px;
+    position:sticky;
+   
+} 
+
+.navigation a{
+    color:#457b9d;
+    text-decoration: none;
+    font-size: 1.4em;
+    font-weight: 800;
+    padding-left: 30px;
+}
+.navigation a:hover{
+    color:black;
+     
+}
+
+
+@media (max-width:500px) {
+
+.social-icons a{
+    display: none;
+
+
+
+   
+}
+
+
+.footer{
+    display: none;
+}
+
+
+}
+@media (max-width:700px) {
+
+    .social-icons a{
+        display: none;
+    
+    
+    
+       
+    }
+    
+    
+    .footer{
+        display: none;
+    }
+    
+    
+    }
+    

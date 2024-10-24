@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.css">
+    <link rel="stylesheet" href="design.css">
+    
+
+    <title>El mahdi Ben Mekki</title>
+</head>
+<body>
+ 
+
+    <header>
+    
+        <button class="menu-toggle" aria-label="Toggle navigation">
+            <!-- Hamburger icon -->
+            <i class="fa-solid fa-bars open-icon"></i>
+            <!-- Close (X) icon -->
+            <i class="fa-solid fa-times close-icon" style="display: none;"></i>
+        </button>
+        <a href="./" class="logo">   <i class="fa-solid fa-palette"></i> Graphic Design</a>
+        <nav class="navigation"> 
+            <a href="./">Home</a>
+            <a href="./#services">Services</a>
+            <a href="./#projects">Projects</a>
+            <a href="./#contact">Contact</a>
+            
+        </nav>
+    </header >
+    
+    <div>
+        <img src="designs/sponjbob.jpeg">
+        <img src="designs/astro-man.gif">
+        <img src="designs/zohal-2.gif">
+        <img src="designs/basit-3.gif" >
+        <img src="designs/ael.jpg" >
+        <img src="designs/2.jpg" >
+        <img src="designs/amine3.jpg" >
+        <img src="designs/soli.jpg" >
+        <img src="designs/soli2.jpg" >
+        <img src="designs/soli3.jpg" >
+        <img src="designs/logo gord.jpg" >
+        <img src="designs/mehdi.jpeg">
+        <img src="designs/logo.jpg" >
+        
+       
+
+
+    </div>
+
+
+    <footer class="footer">
+        <p class="footer-title">©2024. All Rights Reserved</p>
+            <div class="social-icons">
+                <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                <a href=""><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/thisisoden/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.paypal.com/paypalme/elmahdibenmekki"><i class="fa-brands fa-paypal"></i></a>
+                     
+    
+            </div>
+    
+    
+    </footer>
+     
+    
+
+    
+</body>
+</html>
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navigation = document.querySelector('.navigation');
+    const openIcon = document.querySelector('.open-icon'); // Hamburger icon
+    const closeIcon = document.querySelector('.close-icon'); // Close (X) icon
+
+    menuToggle.addEventListener('click', function() {
+        navigation.classList.toggle('active'); // Toggle the menu visibility
+
+        // Toggle the icons
+        openIcon.style.display = openIcon.style.display === 'none' ? 'inline' : 'none';
+        closeIcon.style.display = closeIcon.style.display === 'none' ? 'inline' : 'none';
+    });
+});
+</script>
+

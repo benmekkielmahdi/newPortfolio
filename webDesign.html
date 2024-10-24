@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.css">
+    <link rel="stylesheet" href="webDesign.css">
+    
+
+    <title>El mahdi Ben Mekki</title>
+</head>
+<body>
+ 
+
+    <header>
+    
+        <button class="menu-toggle" aria-label="Toggle navigation">
+            <!-- Hamburger icon -->
+            <i class="fa-solid fa-bars open-icon"></i>
+            <!-- Close (X) icon -->
+            <i class="fa-solid fa-times close-icon" style="display: none;"></i>
+        </button>
+        <a href="./" class="logo">       <i class="fa-solid fa-ruler-combined"></i> Web Design</a>
+        <nav class="navigation"> 
+            <a href="./">Home</a>
+            <a href="./#services">Services</a>
+            <a href="./#projects">Projects</a>
+            <a href="./#contact">Contact</a>
+            
+        </nav>
+    </header >
+    <div>
+        <p style="text-align: center; margin-top: 50px;">This is an example of web design for E-commerce Platform using <span style="color:#457b9d ; font-weight: bold;">Adobe xd/Figma</span>  </p>
+    </div>
+    
+    <div>
+        <img src="webDesing/1.png">
+        <img src="webDesing/2.png">
+        <img src="webDesing/3.png">
+        <img src="webDesing/4.png">
+        <img src="webDesing/5.png">
+        <img src="webDesing/6.png">
+        <img src="webDesing/7.png">
+        <img src="webDesing/8.png">
+        <img src="webDesing/9.png">
+       
+        
+       
+
+
+    </div>
+
+
+    <footer class="footer">
+        <p class="footer-title">©2024. All Rights Reserved</p>
+            <div class="social-icons">
+                <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                <a href=""><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/thisisoden/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.paypal.com/paypalme/elmahdibenmekki"><i class="fa-brands fa-paypal"></i></a>
+                     
+    
+            </div>
+    
+    
+    </footer>
+     
+    
+
+    
+</body>
+</html>
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navigation = document.querySelector('.navigation');
+    const openIcon = document.querySelector('.open-icon'); // Hamburger icon
+    const closeIcon = document.querySelector('.close-icon'); // Close (X) icon
+
+    menuToggle.addEventListener('click', function() {
+        navigation.classList.toggle('active'); // Toggle the menu visibility
+
+        // Toggle the icons
+        openIcon.style.display = openIcon.style.display === 'none' ? 'inline' : 'none';
+        closeIcon.style.display = closeIcon.style.display === 'none' ? 'inline' : 'none';
+    });
+});
+</script>
+
