@@ -65,7 +65,7 @@
     <section  class="main align-right">
         <div>
             <h2 class="left-align" id="hello">Hello, I'm Mahdi </h2>
-            <h2 class="display-4 typing-animation" style="margin-bottom: 100px;"><span1>Software Developer</span1></h2>
+            <h2 class="display-4 typing-animation" style="margin-bottom: 100px;  font-size: 4em;    font-weight: 200;  margin-left: 40px; " >Software Developer</h2>
    
             <a href="./contact.html" class="main-btn2">
                 <i class="fa-brands fa-squarespace"></i> Contact us
@@ -274,122 +274,99 @@
     
 </body>
 </html>
-
-
 <script>
-  
-// Function to toggle background color and save state in localStorage
-function toggleBackgroundColor() {
-    const body = document.body;
-    const headings = document.querySelectorAll('h1, h2, h4, h5, h6');
-    const headings3 = document.querySelectorAll('h3');
-    const buttons = document.querySelectorAll('button');
-    const spans = document.querySelectorAll('span');
-    const spans1 = document.querySelectorAll('.span1'); // Use class for span1 instead of tag name
-    const specificButton = document.getElementById('veiwButton');
-
-    if (body.style.backgroundColor === 'white' || !body.style.backgroundColor) {
-        body.style.backgroundColor = '#457b9d';
-        headings.forEach(heading => heading.style.color = 'white');
-        headings3.forEach(heading => heading.style.color = '#457b9d');
-        buttons.forEach(button => button.style.color = 'white');
-        spans.forEach(span => span.style.color = 'white');
-        spans1.forEach(span => span.style.color = 'white');
-
-        if (specificButton) {
-            specificButton.style.backgroundColor = 'white';
-            specificButton.style.color = '#457b9d';
+    // Define arrays for background and circle colors
+    const backgroundColors = ['#ff6f61','white','#457b9d' , '#fca311', '#a8dadc', '#fb8500', '#9a8c98']; // White, Blue, Red, Yellow-Orange, Light Blue
+    const circleColors = ['#ff6f61','#457b9d', '#457b9d',  '#fca311', '#a8dadc', '#fb8500', '#9a8c98']; // Circle Colors
+    
+    // Variable to track the current color index
+    let currentColorIndex = 0; // Start with the first color
+    
+    // Function to toggle background color and save state in localStorage
+    function toggleBackgroundColor() {
+        const body = document.body;
+        const headings = document.querySelectorAll('h1,h2,h4,h5,h6');
+        const headings3 = document.querySelectorAll('h3');
+        const buttons = document.querySelectorAll('button');
+        const spans = document.querySelectorAll('span');
+        const spans1 = document.querySelectorAll('.span1'); // Ensure this is the correct class
+        const specificButton = document.getElementById('veiwButton');
+        const circle = document.querySelector('.color-toggle-circle'); // Selecting the circle
+    
+        // Increment the color index (cycle through the colors)
+        currentColorIndex = (currentColorIndex + 1) % backgroundColors.length; // Loop back to the first color when the end is reached
+    
+        // Set the new background and circle colors based on the current index
+        body.style.backgroundColor = backgroundColors[currentColorIndex]; // Change background color
+        if (circle) {
+            circle.style.backgroundColor = circleColors[currentColorIndex]; // Change circle color
         }
-
-        // Save the state to localStorage
-        localStorage.setItem('backgroundColor', '#457b9d');
-        localStorage.setItem('headingColor', 'white');
-        localStorage.setItem('heading3Color', '#457b9d');
-        localStorage.setItem('buttonColor', 'white');
-        localStorage.setItem('spanColor', 'white');
-        localStorage.setItem('specificButtonBg', 'white');
-        localStorage.setItem('specificButtonColor', '#457b9d');
-    } else {
-        body.style.backgroundColor = 'white';
-        headings.forEach(heading => heading.style.color = '#457b9d');
-        headings3.forEach(heading => heading.style.color = '#457b9d');
-        buttons.forEach(button => button.style.color = '#457b9d');
-        spans.forEach(span => span.style.color = 'white');
-        spans1.forEach(span => span.style.color = '#457b9d');
-
-        if (specificButton) {
-            specificButton.style.backgroundColor = '#457b9d';
-            specificButton.style.color = 'white';
+    
+        // Update text colors based on the new background color
+        if (backgroundColors[currentColorIndex] === 'white') {
+            headings.forEach(heading => heading.style.color = '#457b9d');
+            headings3.forEach(heading => heading.style.color = '#457b9d');
+            buttons.forEach(button => button.style.color = '#457b9d');
+            spans.forEach(span => span.style.color = 'white');
+            spans1.forEach(span => span.style.color = 'white');
+            if (specificButton) {
+                specificButton.style.backgroundColor = '#457b9d';
+                specificButton.style.color = 'white'; 
+            }
+        } else {
+            headings.forEach(heading => heading.style.color = 'white');
+            headings3.forEach(heading => heading.style.color = '#457b9d');
+            buttons.forEach(button => button.style.color = '#457b9d');
+            spans.forEach(span => span.style.color = 'white');
+            spans1.forEach(span => span.style.color = '#457b9d');
+            if (specificButton) {
+                specificButton.style.backgroundColor = 'white';
+                specificButton.style.color = '#457b9d'; // Change background color of specific button
+            }
         }
-
-        // Save the state to localStorage
-        localStorage.setItem('backgroundColor', 'white');
-        localStorage.setItem('headingColor', '#457b9d');
-        localStorage.setItem('heading3Color', '#457b9d');
-        localStorage.setItem('buttonColor', '#457b9d');
-        localStorage.setItem('spanColor', 'white');
-        localStorage.setItem('specificButtonBg', '#457b9d');
-        localStorage.setItem('specificButtonColor', 'white');
+    
+        // Save the current color index to localStorage
+        localStorage.setItem('colorIndex', currentColorIndex);
     }
-}
-
-// Function to apply the saved color state on page load
-function applySavedColorState() {
-    const body = document.body;
-    const headings = document.querySelectorAll('h1, h2, h4, h5, h6');
-    const headings3 = document.querySelectorAll('h3');
-    const buttons = document.querySelectorAll('button');
-    const spans = document.querySelectorAll('span');
-    const spans1 = document.querySelectorAll('.span1'); // Use class for span1 instead of tag name
-    const specificButton = document.getElementById('veiwButton');
-
-    const savedBackgroundColor = localStorage.getItem('backgroundColor');
-    const savedHeadingColor = localStorage.getItem('headingColor');
-    const savedHeading3Color = localStorage.getItem('heading3Color');
-    const savedButtonColor = localStorage.getItem('buttonColor');
-    const savedSpanColor = localStorage.getItem('spanColor');
-    const savedSpecificButtonBg = localStorage.getItem('specificButtonBg');
-    const savedSpecificButtonColor = localStorage.getItem('specificButtonColor');
-
-    if (savedBackgroundColor) {
-        body.style.backgroundColor = savedBackgroundColor;
-        headings.forEach(heading => heading.style.color = savedHeadingColor);
-        headings3.forEach(heading => heading.style.color = savedHeading3Color);
-        buttons.forEach(button => button.style.color = savedButtonColor);
-        spans.forEach(span => span.style.color = savedSpanColor);
-        spans1.forEach(span => span.style.color = savedSpanColor);
-
-        if (specificButton) {
-            specificButton.style.backgroundColor = savedSpecificButtonBg;
-            specificButton.style.color = savedSpecificButtonColor;
+    
+    // Function to apply default colors on page load
+    function applyDefaultColors() {
+        const body = document.body;
+        const circle = document.querySelector('.color-toggle-circle');
+        
+        // Set default color index to 0 (white background)
+        currentColorIndex = 0; // Reset to white background
+        body.style.backgroundColor = backgroundColors[currentColorIndex];
+        
+        if (circle) {
+            circle.style.backgroundColor = circleColors[currentColorIndex];
         }
+        
+        // Set text colors based on the default background color
+        toggleBackgroundColor(); // Call this to set text colors based on the current background
     }
-}
-
-// Apply saved color state when the page loads
-document.addEventListener('DOMContentLoaded', function() {
-    applySavedColorState();
-});
-
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navigation = document.querySelector('.navigation');
-    const openIcon = document.querySelector('.open-icon'); // Hamburger icon
-    const closeIcon = document.querySelector('.close-icon'); // Close (X) icon
-
-    menuToggle.addEventListener('click', function() {
-        navigation.classList.toggle('active'); // Toggle the menu visibility
-
-        // Toggle the icons
-        openIcon.style.display = openIcon.style.display === 'none' ? 'inline' : 'none';
-        closeIcon.style.display = closeIcon.style.display === 'none' ? 'inline' : 'none';
+    
+    // Apply default colors when the page loads
+    document.addEventListener('DOMContentLoaded', function() {
+        applyDefaultColors();
+    
+        // Menu toggle functionality
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navigation = document.querySelector('.navigation');
+        const openIcon = document.querySelector('.open-icon'); // Hamburger icon
+        const closeIcon = document.querySelector('.close-icon'); // Close (X) icon
+    
+        menuToggle.addEventListener('click', function() {
+            navigation.classList.toggle('active'); // Toggle the menu visibility
+    
+            // Toggle the icons
+            openIcon.style.display = openIcon.style.display === 'none' ? 'inline' : 'none';
+            closeIcon.style.display = closeIcon.style.display === 'none' ? 'inline' : 'none';
+        });
     });
-});
-
-
-
- 
-
+    
+    // Call the toggle function on a button click or specific event
+    // For example, if you have a button to toggle colors:
+    // document.getElementById('toggleColorButton').addEventListener('click', toggleBackgroundColor);
+    
 </script>

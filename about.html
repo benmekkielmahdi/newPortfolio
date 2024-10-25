@@ -22,7 +22,10 @@
         <a href="https://www.paypal.com/paypalme/elmahdibenmekki"><i class="fa-brands fa-paypal"></i></a>
     </div>
     <button class="menu-toggle" aria-label="Toggle navigation">
-        <i class="fa-solid fa-bars"></i> <!-- Hamburger icon -->
+        <!-- Hamburger icon -->
+        <i class="fa-solid fa-bars open-icon"></i>
+        <!-- Close (X) icon -->
+        <i class="fa-solid fa-times close-icon" style="display: none;"></i>
     </button>
     <nav class="navigation"> 
         <a href="./">Home</a>
@@ -209,12 +212,20 @@
 </body>
 </html>
  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navigation = document.querySelector('.navigation');
 
-        menuToggle.addEventListener('click', function() {
-            navigation.classList.toggle('active');
-        });
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navigation = document.querySelector('.navigation');
+    const openIcon = document.querySelector('.open-icon'); // Hamburger icon
+    const closeIcon = document.querySelector('.close-icon'); // Close (X) icon
+
+    menuToggle.addEventListener('click', function() {
+        navigation.classList.toggle('active'); // Toggle the menu visibility
+
+        // Toggle the icons
+        openIcon.style.display = openIcon.style.display === 'none' ? 'inline' : 'none';
+        closeIcon.style.display = closeIcon.style.display === 'none' ? 'inline' : 'none';
     });
+});
+
  </script>

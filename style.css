@@ -122,8 +122,9 @@ section{
 
 }
 .main-btn:hover{
-    background-color:white ;
     color:#457b9d ;
+    background-color:white ;
+   
     transform: scale(1.1);
   
 }
@@ -404,9 +405,9 @@ section{
     .main h2 span1{
         display: inline-block;
         margin-left: 30px;
-        color:#457b9d;
         font-size: 2.3em;
-        font-weight: 500;
+        font-weight: 400;
+        /* -webkit-text-stroke: 0.5px white; */
       
         /* -webkit-text-stroke: 1px white; */
     }
@@ -424,14 +425,9 @@ section{
         background-position: right center; /* Position the image on the right and center vertically */
         background-attachment: fixed; /* Image stays fixed while scrolling */
     }
+  
     
-    .main h2 {
-        color: white;
-        font-size: 1.5em;
-        font-weight: 500;
-   
     
-    }
     .main-btn2{
         
         font-size: 1.5em;
@@ -576,7 +572,7 @@ section{
         display: flex;
         align-items: center;
         position: relative; /* Add this to position the pseudo-element correctly */
-        background-image: url('imges/nvBackground-removebg.png'); /* Replace with your image URL */
+        background-image: url('images/nvBackground-removebg.png'); /* Replace with your image URL */
         background-size: 100% auto; 
         background-position: right center; 
         background-attachment: fixed; 
